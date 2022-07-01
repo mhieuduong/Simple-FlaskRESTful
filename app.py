@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, render_template
 from flask_restful import Api
 from flask_jwt import JWT
 
@@ -24,7 +24,12 @@ api.add_resource(ItemList, '/items')
 api.add_resource(UserRegister, '/register')
 api.add_resource(StoreList, '/stores')
 
+@app.route('/')
+def hello_world():
+    return render_template('index.html')
+
 if __name__ == '__main__':
     from db import db
     db.init_app(app)
     app.run(port=5000, debug=True)
+    # app.run(port=5000, debug=True, host='0.0.0.0')
