@@ -19,6 +19,7 @@ Có các API trong hệ thống:
 Các API yêu cầu token được khởi tạo từ /auth. Token được tạo từ JWT
 
 Cấu trúc thư mục
+
     __models : chứa các phương thức giao tiếp với CSDL
     __resources : chứa các phương thức cho các lớp item, store,..
     __templates : chứa tệp .html
